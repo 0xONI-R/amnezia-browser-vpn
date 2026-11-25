@@ -22,7 +22,7 @@ LISTEN_PORT="${LISTEN_PORT:-443}"
 VERSION="${VERSION:-latest}"
 DRY_RUN=0
 OPEN_FIREWALL=0
-BASE="https://github.com/RoninOnis/amnezia-browser-vpn/releases"
+BASE="https://github.com/0xONI-R/amnezia-browser-vpn/releases"
 TOKEN="${TOKEN:-}"
 
 while [ $# -gt 0 ]; do

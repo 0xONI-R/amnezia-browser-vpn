@@ -11,7 +11,7 @@
 set -euo pipefail
 
 VERSION="${VERSION:-latest}"
-REPO="${REPO:-RoninOnis/amnezia-browser-vpn}"
+REPO="${REPO:-0xONI-R/amnezia-browser-vpn}"
 HOST_NAME="awgbv"
 EXT_ID="awgbv@0xoni.ru"
 BIN_DIR="${BIN_DIR:-$HOME/.local/bin}"

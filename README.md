@@ -57,7 +57,7 @@ install-windows.cmd            :: Windows: чистый batch, curl.exe + certut
 (его перезапускают) и если попросить об этом явно: `KEEP_SCRIPT=1 bash install-linux.sh`
 или `install-windows.cmd /keep`.
 
-**2. Расширение** — подписанный `.xpi` из [releases](https://github.com/RoninOnis/amnezia-browser-vpn/releases):
+**2. Расширение** — подписанный `.xpi` из [releases](https://github.com/0xONI-R/amnezia-browser-vpn/releases):
 `about:addons` → шестерёнка → «Установить дополнение из файла». Подписано на AMO по каналу
 **unlisted**: в каталоге не публикуется, но ставится как обычное дополнение и переживает перезапуск.
 
@@ -105,7 +105,7 @@ dist/awgbv-linux-amd64`, `./install/sign.sh` для подписи в AMO. ID д
 
 ```bash
 curl -fsSL -o install-satellite.sh \
-  https://github.com/RoninOnis/amnezia-browser-vpn/releases/latest/download/install-satellite.sh
+  https://github.com/0xONI-R/amnezia-browser-vpn/releases/latest/download/install-satellite.sh
 sudo bash install-satellite.sh --dry-run      # печатает найденные контейнеры и план
 sudo bash install-satellite.sh                # установка
 ```
@@ -221,4 +221,4 @@ python3 tests/e2e_nm.py dist/awgbv-linux-amd64 ./my.conf --expect-ip 203.0.113.1
 Слово «Amnezia» стоит только как указание на совместимость с профилями `vpn://` и протоколом
 AmneziaWG на вашем сервере. Иконка — знак Amnezia (принадлежит проекту Amnezia, исходники под
 GPL-3.0) в градиенте Firefox; прав на знак не заявляем и заменим по первому требованию
-правообладателя через [issues](https://github.com/RoninOnis/amnezia-browser-vpn/issues).
+правообладателя через [issues](https://github.com/0xONI-R/amnezia-browser-vpn/issues).

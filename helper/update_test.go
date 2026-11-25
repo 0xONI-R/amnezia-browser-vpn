@@ -68,7 +68,7 @@ func TestFetchLatestReleaseParsesGitHubPayload(t *testing.T) {
 	body := `{
 	  "tag_name": "v0.3.7",
 	  "published_at": "2026-11-20T10:00:00Z",
-	  "html_url": "https://github.com/RoninOnis/amnezia-browser-vpn/releases/tag/v0.3.7",
+	  "html_url": "https://github.com/0xONI-R/amnezia-browser-vpn/releases/tag/v0.3.7",
 	  "prerelease": false,
 	  "draft": false,
 	  "assets": [

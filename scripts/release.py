@@ -27,13 +27,13 @@ import subprocess
 import sys
 import urllib.request
 
-REPO = "RoninOnis/amnezia-browser-vpn"
+REPO = "0xONI-R/amnezia-browser-vpn"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STAGE = "/tmp/awgbv-release"
 
 
 def token():
-    path = os.path.expanduser("~/.hermes/github_token_roninoni")
+    path = os.path.expanduser("~/.hermes/github_token_0xoni-r")
     with open(path) as fh:
         return fh.read().strip()
 

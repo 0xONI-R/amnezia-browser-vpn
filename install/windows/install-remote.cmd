@@ -11,7 +11,7 @@ rem  and a mis-decoded byte used to break script parsing.
 rem ============================================================================
 setlocal enableextensions enabledelayedexpansion
 
-set "REPO=RoninOnis/amnezia-browser-vpn"
+set "REPO=0xONI-R/amnezia-browser-vpn"
 set "BASE=https://github.com/%REPO%/releases/latest/download"
 set "HOST_NAME=awgbv"
 set "EXT_ID=awgbv@0xoni.ru"

@@ -23,7 +23,7 @@ const (
 
 // releasesAPI — переменная, а не константа: тесты подменяют её на httptest-сервер,
 // чтобы проверять разбор настоящего ответа GitHub, а не выдуманную структуру.
-var releasesAPI = "https://api.github.com/repos/RoninOnis/amnezia-browser-vpn/releases/latest"
+var releasesAPI = "https://api.github.com/repos/0xONI-R/amnezia-browser-vpn/releases/latest"
 
 // UpdateInfo — то, что уходит в расширение.
 type UpdateInfo struct {
