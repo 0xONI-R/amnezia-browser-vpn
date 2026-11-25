@@ -74,10 +74,18 @@ async function awgbvDecodeVpn(json) {
       last = null;
     }
   }
-  const pick = (key) => {
-    if (last && typeof last[key] === "string" && last[key]) return last[key];
-    if (typeof awg[key] === "string") return awg[key];
+  const asText = (v) => {
+    if (typeof v === "string") return v;
+    if (typeof v === "number" && Number.isFinite(v)) return String(v);
+    if (typeof v === "boolean") return v ? "on" : "off";
     return "";
+  };
+  const pick = (key) => {
+    if (last) {
+      const v = asText(last[key]);
+      if (v) return v;
+    }
+    return asText(awg[key]);
   };
   const portStr = pick("port") || String(awg.port || "");
   const profile = {
@@ -109,6 +117,16 @@ async function awgbvDecodeVpn(json) {
       i3: pick("I3"),
       i4: pick("I4"),
       i5: pick("I5"),
+      // AWG 3.x: без этих полей сервер нового Amnezia молча выбрасывает handshake
+      headerProtectionKey: pick("HeaderProtectionKey"),
+      contentPaddingAddition: pick("ContentPaddingAddition"),
+      rekeyAfterTime: pick("RekeyAfterTime"),
+      rekeyTimeout: pick("RekeyTimeout"),
+      rejectAfterTime: pick("RejectAfterTime"),
+      keepaliveTimeout: pick("KeepaliveTimeout"),
+      maxHandshakeAttempts: pick("MaxHandshakeAttempts"),
+      randomTrailers: pick("RandomTrailers"),
+      disableCookies: pick("DisableCookies"),
     },
   };
   if (!profile.host || !profile.port || !profile.privateKey || !profile.peerPublicKey || !profile.clientIp) {
